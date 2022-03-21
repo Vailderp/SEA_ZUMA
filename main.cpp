@@ -4246,3 +4246,11 @@ private:
 	}
 
 };
+
+int main()
+{
+	//ShowWindow(::GetConsoleWindow(), SW_SHOW);
+	PagesAndWindows::page_game = std::make_unique<ZumaGame>();
+	((ZumaGame*)PagesAndWindows::page_game.get())->start();
+	return EXIT_SUCCESS;
+}
